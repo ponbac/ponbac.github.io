@@ -2,7 +2,18 @@ body {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    background-image: url('../images/sky.jpg');
+    /*background-image: url('../images/sky.jpg');*/
     background-size: 100% 100%;
     background-position: top center
 }
+
+@media (max-width: 800px) {
+    body {
+      background-image: url("../images/mobile.jpg");
+    }
+  }
+  @media (min-width: 801px) {
+    body {
+      background-image: url('../images/sky.jpg');
+    }
+  }
