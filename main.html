@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="web interface for NAO-robot autism therapy">
+    <meta name="author" content="Pontus Backman">
+    <link rel="shortcut icon" href="/static/images/pyramid-16x16.png">
+
+    
+    <title>Session</title>
+
+
+    
+    <link href="/static/style/main.css" rel="stylesheet">
+    <link href="/static/style/clock.css" rel="stylesheet">
+    <link href="/static/style/volume.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+
+    <!-- Standard CSS -->
+    <link href="/static/style/theme.css" rel="stylesheet">
+
+
+    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"
+            integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY"
+            crossorigin="anonymous"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"
+            integrity="sha384-f1r2UzjsxZ9T4V1f2zBO/evUqSEOpeaUUZcMTz1Up63bl4ruYnFYeM+BxI4NhyI0"
+            crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="tabbed">
+        <input type="radio" name="tabs" id="tab-nav-1" checked>
+        <label for="tab-nav-1">Info</label>
+        <input type="radio" name="tabs" id="tab-nav-2">
+        <label for="tab-nav-2">Greeting</label>
+        <input type="radio" name="tabs" id="tab-nav-3">
+        <label for="tab-nav-3">Task 1</label>
+        <input type="radio" name="tabs" id="tab-nav-4">
+        <label for="tab-nav-4">Task 2</label>
+        <input type="radio" name="tabs" id="tab-nav-5">
+        <label for="tab-nav-5">Task 3</label>
+        <input type="radio" name="tabs" id="tab-nav-6">
+        <label for="tab-nav-6">Task 4</label>
+        <input type="radio" name="tabs" id="tab-nav-7">
+        <label for="tab-nav-7">Task 5</label>
+        <input type="radio" name="tabs" id="tab-nav-8">
+        <label for="tab-nav-8">Task 6</label>
+        <input type="radio" name="tabs" id="tab-nav-9">
+        <label for="tab-nav-9">Good bye!</label>
+        <div class="tabs">
+            <div class="taskBox" id="info"><h2>Information</h2>
+                <p>Click on the task tabs above to begin!</p>
+                <p>Child's name: <b>Kalle</b></p>
+                <p>Selected NAO IP: <b>192.168.0.22</b></p>
+                <p id="volume-desc"><b>Change NAO's volume with the slider:</b></p>
+                <div class="volume">
+                    <span id="volume-progressbar" class="volume-progressbar"></span>
+                    <input type="range" min="0" max="100" step="1" value="100" id="np-volume" class="volume-slider"
+                           role="progressbar">
+                </div>
+            </div>
+            <div class="taskBox" id="greetingBox"><h2>Greeting</h2>
+                <p class="taskDesc">Press the button below to start greeting</p>
+                <a href="#" id="greetingButton" class="btn-gradient blue large centered">Start</a>
+            </div>
+            <div class="taskBox" id="taskBox1"><h2>Task 1</h2>
+                <p>Place your four toy vehicles in front of the child before you begin.</p>
+                <p class="taskDesc">Press the button below to start task 1</p>
+                <a href="#" id="startButton1" class="btn-gradient blue large centered">Start</a>
+            </div>
+            <div class="taskBox" id="taskBox2"><h2>Task 2</h2>
+                <p class="taskDesc">Press the button below to start task 2</p>
+                <a href="#" id="startButton2" class="btn-gradient blue large centered">Start</a>
+            </div>
+            <div class="taskBox" id="taskBox3"><h2>Task 3</h2>
+                <p class="taskDesc">Press the button below to start task 3</p>
+                <a href="#" id="startButton3" class="btn-gradient blue large centered">Start</a>
+            </div>
+            <div class="taskBox" id="taskBox4"><h2>Task 4</h2>
+                <p class="taskDesc">Press the button below to start task 4</p>
+                <a href="#" id="startButton4" class="btn-gradient blue large centered">Start</a>
+            </div>
+            <div class="taskBox" id="taskBox5"><h2>Task 5</h2>
+                <p class="taskDesc">Press the button below to start task 5</p>
+                <a href="#" id="startButton5" class="btn-gradient blue large centered">Start</a>
+            </div>
+            <div class="taskBox" id="taskBox6"><h2>Task 6</h2>
+                <p class="taskDesc">Press the button below to start task 6</p>
+                <a href="#" id="startButton6" class="btn-gradient blue large centered">Start</a>
+            </div>
+            <div class="taskBox" id="goodbyeBox"><h2>Good bye!</h2>
+                <p class="taskDesc">Press the button below to start good bye!</p>
+                <a href="#" id="goodbyeButton" class="btn-gradient blue large centered">Start</a>
+            </div>
+        </div>
+    </div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js"
+        integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h"
+        crossorigin="anonymous"></script>
+<script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"
+        integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/countdown-clock.js"></script>
+    <script src="/static/js/volume.js"></script>
+
+</body>
+</html>
