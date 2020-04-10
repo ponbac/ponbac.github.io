@@ -2,6 +2,7 @@ $(document).ready(function () {
     // Get value on button click and show alert
     $("#submitButton").click(function () {
         submit();
+        window.history.pushState(123, "Start")
     });
 
     $("#nameField").on('keyup', function (e) {
@@ -14,6 +15,11 @@ $(document).ready(function () {
         if (e.keyCode === 13) {
             submit()
         }
+    });
+
+    $("#helpButton").click(function () {
+        window.location.replace("/help");
+        window.history.pushState(123, "Start")
     });
 });
 

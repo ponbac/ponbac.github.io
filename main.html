@@ -37,6 +37,9 @@
 
 <body>
 
+    <div class="top-left">
+        <button type="button" class="ButtonStyle" id="backButton">&lArr; Back</button>
+    </div>
     <div class="tabbed">
         <input type="radio" name="tabs" id="tab-nav-1" checked>
         <label for="tab-nav-1">Info</label>
@@ -59,8 +62,8 @@
         <div class="tabs">
             <div class="taskBox" id="info"><h2>Information</h2>
                 <p>Click on the task tabs above to begin!</p>
-                <p>Child's name: <b>Kalle</b></p>
-                <p>Selected NAO IP: <b>192.168.0.22</b></p>
+                <p>Child's name: <b>Pontus</b><button id="changeNameButton">change name</button></p>
+                <p>Selected NAO IP: <b>1.1.1.1</b></p>
                 <p id="volume-desc"><b>Change NAO's volume with the slider:</b></p>
                 <div class="volume">
                     <span id="volume-progressbar" class="volume-progressbar"></span>
@@ -73,27 +76,66 @@
                 <a href="#" id="greetingButton" class="btn-gradient blue large centered">Start</a>
             </div>
             <div class="taskBox" id="taskBox1"><h2>Task 1</h2>
-                <p>Place your four toy vehicles in front of the child before you begin.</p>
+                <div class="taskIntention">
+                    <p><b> <u>Intention of the task:</u> </b> Increase the child's ability to make choices and keep <br>
+                        the session interesting for the child. </p>
+                </div>
+                <p><b> <u>Specific interest:</u> </b> Vehicles. </p>
+                <p><b> <u> Before starting the task:</u></b> Place 4 toy vehicles/pictures infront of the robot. <br>
+                    (Order from robot's right to robots left: car, helicopter, boat, motorcycle)</p>
                 <p class="taskDesc">Press the button below to start task 1</p>
                 <a href="#" id="startButton1" class="btn-gradient blue large centered">Start</a>
             </div>
             <div class="taskBox" id="taskBox2"><h2>Task 2</h2>
+                <div class="taskIntention">
+                    <p><b> <u>Intention of the task:</u> </b> Increase the child's ability to understand and recognise
+                        <br>feelings by following instructions. </p>
+                </div>
+                <p><b> <u> Before starting the task:</u></b> Place the pictures of Anna and David infront of the robot
+                    <br> (Order from robot's right to robots left: Anna (sad), David (happy))</p>
                 <p class="taskDesc">Press the button below to start task 2</p>
                 <a href="#" id="startButton2" class="btn-gradient blue large centered">Start</a>
             </div>
             <div class="taskBox" id="taskBox3"><h2>Task 3</h2>
+                <div class="taskIntention">
+                    <p><b> <u>Intention of the task:</u> </b> Increase the child’s ability to understand and recognise
+                        <br>feelings. </p>
+                </div>
+                <p><b> <u> Before starting the task:</u></b> Place the pictures of a happy and an angry boy infront of
+                    the robot <br>(Order from robots right to robot's left: happy boy (John), angry boy)</p>
                 <p class="taskDesc">Press the button below to start task 3</p>
                 <a href="#" id="startButton3" class="btn-gradient blue large centered">Start</a>
             </div>
             <div class="taskBox" id="taskBox4"><h2>Task 4</h2>
+                <div class="taskIntention">
+                    <p><b> <u>Intention of the task:</u> </b> Increase the child’s ability to make choices as well as
+                        <br>keep it interesting for the child. </p>
+                </div>
+                <p><b> <u>Specific interest:</u> </b> Vehicles. </p>
+                <p><b> <u> Before starting the task:</u></b> Place the 4 toy vehicles or pictures of vehicles infront of
+                    the robot <br>(Order is optional)</p>
                 <p class="taskDesc">Press the button below to start task 4</p>
                 <a href="#" id="startButton4" class="btn-gradient blue large centered">Start</a>
             </div>
             <div class="taskBox" id="taskBox5"><h2>Task 5</h2>
+                <div class="taskIntention">
+                    <p><b> <u>Intention of the task:</u> </b> Increase the child's ability to identify and recognise
+                        <br>feelings. </p>
+                </div>
+                <p><b> <u> Before starting the task:</u></b> Place the pictures of happy boy (John) and 3 other children
+                    infront of the robot. <br>(Order from robot's right to robots left: happy boy (John), surprised boy,
+                    sad girl (Anna), happy girl)</p>
                 <p class="taskDesc">Press the button below to start task 5</p>
                 <a href="#" id="startButton5" class="btn-gradient blue large centered">Start</a>
             </div>
             <div class="taskBox" id="taskBox6"><h2>Task 6</h2>
+                <div class="taskIntention">
+                    <p><b> <u>Intention of the task:</u> </b> Increase the child's ability to both make choices as well
+                        as <br> recognising feelings. </p>
+                </div>
+                <p><b> <u> Before starting the task:</u></b> Place the pictures a happy girl, a sad girl and an angry
+                    boy infront of the robot. <br> (Order form robot's right to left: happy girl, sad girl, angry boy)
+                </p>
                 <p class="taskDesc">Press the button below to start task 6</p>
                 <a href="#" id="startButton6" class="btn-gradient blue large centered">Start</a>
             </div>
@@ -101,6 +143,9 @@
                 <p class="taskDesc">Press the button below to start good bye!</p>
                 <a href="#" id="goodbyeButton" class="btn-gradient blue large centered">Start</a>
             </div>
+        </div>
+        <div class="under-tabbed-left">
+            <button type="button" class="ButtonStyle" id="helpButton">Help!</button>
         </div>
     </div>
 
@@ -119,5 +164,13 @@
     <script src="/static/js/countdown-clock.js"></script>
     <script src="/static/js/volume.js"></script>
 
+<link rel="stylesheet" type="text/css" href="/_debug_toolbar/static/toolbar/toolbar_button.css" />
+
+<div id="pDebug">
+    <div  id="pDebugToolbarHandle">
+        <a title="Show Toolbar" id="pShowToolBarButton"
+           href="/_debug_toolbar/3833363535323830" target="pDebugToolbar">&#171;</a>
+    </div>
+</div>
 </body>
 </html>

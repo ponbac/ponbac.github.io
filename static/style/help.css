@@ -9,11 +9,9 @@
 	 background-color: #4ec6de;
 }
  .tabbed {
-	 width: 831px;
+	 width: 830px;
 	 margin: 50px auto;
-	 position: relative;
-	 margin-top: 5%;
-}
+ }
  .tabbed > input {
 	 display: none;
 }
@@ -45,7 +43,7 @@
 	 transition: opacity 0.3s, transform 1s;
 	 z-index: 0;
 }
- #tab-nav-1:checked ~ .tabs > div:nth-of-type(1), #tab-nav-2:checked ~ .tabs > div:nth-of-type(2), #tab-nav-3:checked ~ .tabs > div:nth-of-type(3), #tab-nav-4:checked ~ .tabs > div:nth-of-type(4), #tab-nav-5:checked ~ .tabs > div:nth-of-type(5), #tab-nav-6:checked ~ .tabs > div:nth-of-type(6), #tab-nav-7:checked ~ .tabs > div:nth-of-type(7), #tab-nav-8:checked ~ .tabs > div:nth-of-type(8), #tab-nav-9:checked ~ .tabs > div:nth-of-type(9){
+ #tab-nav-1:checked ~ .tabs > div:nth-of-type(1), #tab-nav-2:checked ~ .tabs > div:nth-of-type(2), #tab-nav-3:checked ~ .tabs > div:nth-of-type(3), #tab-nav-4:checked ~ .tabs > div:nth-of-type(4), #tab-nav-5:checked ~ .tabs > div:nth-of-type(5), #tab-nav-6:checked ~ .tabs > div:nth-of-type(6){
 	 transform: rotateX(0);
 	 opacity: 1;
 	 z-index: 1;
@@ -65,43 +63,11 @@
 		 position: relative;
 		 transform: none;
 		 margin-bottom: 60px;
-	 }
-
+	}
 	 .tabs > div h2 {
 		 border-bottom: 2px solid #4ec6de;
 		 padding-bottom: 0.5em;
-	 }
- }
-
- .under-tabbed-left {
-	 position: absolute;
-	 bottom: -450px;
-	 left: 0;
-
- }
-
- .top-left {
-	 position: fixed;
-	 top: 10px;
-	 left: 10px;
- }
-
- .ButtonStyle {
-	 border-radius: 25px;
-	 width: fit-content;
-    padding: 5px 20px;
-    margin-top: 5px;
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    background-color: #4ec6de40;
-    border: solid 1px #4ec6de;
-    transition: 0.5s;
-}
-
-.ButtonStyle:hover {
-    background-color: #4ec6de;
-    color: #000000;
+	}
 }
 
  * {
@@ -117,24 +83,62 @@ body {
 	padding: 30px;
 	text-align: center;
 }
-.header h1 {
-	font-weight: 300;
-	display: inline;
-}
-h2 {
-	color: #89867e;
-	text-align: center;
-	font-weight: 300;
-}
-.color {
-	width: 350px;
-	margin: 0 auto;
-}
-.color li {
-	margin: 0 15px 0 0;
-	width: 30px;
-	height: 30px;
-	display: inline-block;
+
+ .header h1 {
+	 font-weight: 300;
+	 display: inline;
+ }
+
+ h2 {
+	 color: #89867e;
+	 text-align: center;
+	 font-weight: 300;
+ }
+
+ .top-left {
+	 position: fixed;
+	 top: 10px;
+	 left: 10px;
+ }
+
+ .ButtonStyle {
+    border-radius: 25px;
+    width: fit-content;
+    padding: 5px 20px;
+	 margin-top: 5px;
+	 font-size: 18px;
+	 color: white;
+	 text-align: center;
+	 background-color: #4ec6de40;
+	 border: solid 1px #4ec6de;
+	 transition: 0.5s;
+ }
+
+ .ButtonStyle:hover {
+	 background-color: #4ec6de;
+	 color: #000000;
+ }
+
+ a:link, a:visited {
+	 color: #0C7C59;
+	 text-decoration: underline;
+	 cursor: pointer;
+ }
+
+ a:link:active, a:visited:active {
+	 color: #0d5c3c;
+ }
+
+ .color {
+	 width: 350px;
+	 margin: 0 auto;
+ }
+
+ .color li {
+	 margin: 0 15px 0 0;
+	 width: 30px;
+	 height: 30px;
+	 display: inline-block;
 	border-radius: 100%;
 }
 .color .red    {background: #fa5a5a;}
@@ -189,7 +193,7 @@ pre .val {color: #e6db74;} /* value */
 	margin: 9px;
 }
 .btn-gradient {
-	margin-top: 150px;
+	margin: 5px;
 }
 a[class*="btn"] {text-decoration: none;}
 input[class*="btn"],
@@ -502,33 +506,16 @@ button[class*="btn"] {border: 0;}
 	text-align: center;
 }
 
-.taskIntention {
-	border-style: solid;
-	border-width: 2px;
-	border-color: #7fcdde8c;
-	border-radius: 2px;
-	margin-left: 70px;
-	margin-right: 70px;
-}
-
 .leftButton {
-	position: absolute;
-	top: 55%;
-	left: 25%;
-	transform: translate(-50%, -50%)
-}
-
- .middleButton {
     position: absolute;
-    top: 55%;
-    left: 50%;
+    top: 48%;
+    left: 35%;
     transform: translate(-50%, -50%)
 }
 
 .rightButton {
     position: absolute;
-    top: 55%;
-    left: 75%;
+    top: 48%;
+    left: 65%;
     transform: translate(-50%, -50%)
 }
-

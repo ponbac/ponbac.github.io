@@ -42,12 +42,15 @@
         <!--Div for Centered Text & Input-->
         <div class="centered">
             <p class="firstLine"> N &nbsp; A &nbsp; O </p>
-            <p class="secondLine">Web interface for the developed session</p>
+            <p class="secondLine">Welcome to the session interface. <br> Help on how to set up the robot can be found by clicking the help button below. <br>To start the session please enter your NAO-robot’s IP-address and the child’s name. <br>Followed by hitting Submit!</p>
             <p><input class="InputStyle" id="nameField" placeholder="Enter the child's name here"
                       type="text"></p>
             <p><input class="InputStyle" id="ipField" placeholder="Enter your NAO's IP-address here"
                       type="text"></p>
-            <input type="submit" value="Submit" class="btn ButtonStyle" id="submitButton"/>
+            <p><input type="submit" value="Submit" class="ButtonStyleSubmit" id="submitButton"></p>
+            <p>
+                <button type="button" class="ButtonStyle" id="helpButton">Help!</button>
+            </p>
         </div>
     </div>
 
@@ -62,6 +65,8 @@
         crossorigin="anonymous"></script>
 
     <script src="/static/js/start.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/_debug_toolbar/static/toolbar/toolbar_button.css" />
 
 </body>
 </html>

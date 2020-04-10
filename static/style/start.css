@@ -21,14 +21,38 @@
 
 .ButtonStyle {
     border-radius: 25px;
-    width: 100px;
+    width: fit-content;
     padding: 5px 20px;
     margin-top: 5px;
     font-size: 18px;
-    color: whitesmoke;
+    color: white;
     text-align: center;
-    background-color: transparent;
-    border: solid 1px white;
+    background-color: #4ec6de40;
+    border: solid 1px #4ec6de;
+    transition: 0.5s;
+}
+
+.ButtonStyleSubmit {
+    border-radius: 25px;
+    width: fit-content;
+    padding: 5px 20px;
+    margin-top: 5px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    background-color: #0C7C5940;
+    border: solid 1px #0C7C59;
+    transition: 0.5s;
+}
+
+.ButtonStyleSubmit:hover {
+    background-color: #0C7C59;
+    color: #000000;
+}
+
+.ButtonStyle:hover {
+    background-color: #4ec6de;
+    color: #000000;
 }
 
 input,
@@ -61,7 +85,7 @@ input:focus {
 .secondLine {
     font-weight: 350;
     font-size: 15px;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     color: white
 }
 

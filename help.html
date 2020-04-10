@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="web interface for NAO-robot autism therapy">
+    <meta name="author" content="Pontus Backman">
+    <link rel="shortcut icon" href="/static/images/pyramid-16x16.png">
+
+    
+    <title>Help</title>
+
+
+    
+    <link href="/static/style/help.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+
+    <!-- Standard CSS -->
+    <link href="/static/style/theme.css" rel="stylesheet">
+
+
+    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"
+            integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY"
+            crossorigin="anonymous"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"
+            integrity="sha384-f1r2UzjsxZ9T4V1f2zBO/evUqSEOpeaUUZcMTz1Up63bl4ruYnFYeM+BxI4NhyI0"
+            crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="top-left">
+        <button type="button" class="ButtonStyle" id="backButton">&lArr; Back</button>
+    </div>
+    <div class="tabbed">
+        <input type="radio" name="tabs" id="tab-nav-1" checked>
+        <label for="tab-nav-1">Setup</label>
+        <input type="radio" name="tabs" id="tab-nav-2">
+        <label for="tab-nav-2">Session</label>
+        <input type="radio" name="tabs" id="tab-nav-3">
+        <label for="tab-nav-3">Tasks</label>
+        <input type="radio" name="tabs" id="tab-nav-4">
+        <label for="tab-nav-4">Contact us</label>
+        <div class="tabs">
+            <div class="taskBox" id="setup">
+                <h2>How to setup your session</h2>
+                <p>Welcome to the NAO web interface!</p>
+                <p>To setup your session, simply enter the child's name and the NAO's IP-address and press submit.
+                    Your NAO will only use the child's name during the session, it will not saved for future sessions
+                    nor
+                    for any other purpose.</p>
+
+                <h2>How to find the IP-address</h2>
+                <p>The NAO's IP-address is easily accessible by simply pressing the button on it's chest.</p>
+            </div>
+            <div class="taskBox" id="taskBox2">
+                <h2>Conducting a session</h2>
+                <p>A session is conducted by progressing through the tasks that are found as tabs in the session window.
+                    Once a child is finished with a task, simply choose another task to continue the session.</p>
+                <p>It is recommended to initiate the session by running the 'Greeting' task to introduce the child to
+                    the robot. Likewise, running the 'Goodbye' task once the session is concluded provides a clear
+                    finish</p>
+
+
+                <h2>Before the session</h2>
+                <p>Make sure that the robot is fully charged before attempting to perform a session, the charger is
+                    best left disconnected during the session. Any other items needed for the session can be found in
+                    the
+                    specific tasks, review these to make sure everything is ready.</p>
+            </div>
+            <div class="taskBox" id="taskBox3">
+                <h2>How to perform a task</h2>
+                <p>Clicking the tab for a corresponding task opens the window in which the task is controlled.
+                    During the task the child is expected to provide different answers to questions asked by the NAO.
+                    The
+                    NAO itself can't interpret answers, so it's up to whoever is controlling the session to communicate
+                    with NAO what the child answered.</p>
+                <h2>How to communicate with NAO</h2>
+                <p>Whenever NAO expects an answer, a multitude of buttons are presented in the task-window. Press the
+                    button which best suits the child's response. This will continue the task appropriately.</p>
+                <p>Whenever the NAO is communicating with the child, a timer will appear in the task-window. This timer
+                    indicates how long till an answer is expected. Once the buttons appear, whoever is controlling the
+                    session has unlimited time in deciding which answer is the most appropriate. No timer is running in
+                    the
+                    background.</p>
+
+            </div>
+            <div class="taskBox" id="taskBox4">
+                <h2>Have any questions, feedback or problems?</h2>
+                <p>Don't hesitate to send us an e-mail at: <a href="mailto:kandidatautism@gmail.com">kandidatautism@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js"
+        integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h"
+        crossorigin="anonymous"></script>
+<script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"
+        integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+    <script src="/static/js/help.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/_debug_toolbar/static/toolbar/toolbar_button.css" />
+
+</body>
+</html>

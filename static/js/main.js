@@ -44,6 +44,16 @@ $(document).ready(function () {
         currentStage = 1;
         continueTask(currentTask, currentStage)
     });
+    $("#backButton").click(function () {
+        goBack();
+    });
+    $("#helpButton").click(function () {
+        window.history.pushState(123, "Session");
+        window.location.replace("/help");
+    });
+    $("#changeNameButton").click(function () {
+        changeName();
+    });
 
     //insertClock("info", 10);
 });
@@ -526,6 +536,15 @@ async function addButtons(taskID, onlyYesNo = false) {
     $("#noButton-" + taskID).fadeIn("slow");
 }
 
+function changeButtonTexts(taskID, text1, text2, text3 = "") {
+    $("#yesButton-" + taskID).html(text1);
+    $("#noButton-" + taskID).html(text2);
+
+    if ($("#middleButton-" + taskID).length) {
+        $("#middleButton-" + taskID).html(text3);
+    }
+}
+
 async function waitForClock() {
     return new Promise(resolve => {
         var start_time = Date.now();
@@ -556,4 +575,21 @@ function runTaskStage(task, stage) {
             console.log("POST SUCCESSFUL! Task: " + task + " Stage: " + stage);
         });
     }
+}
+
+function goBack() {
+    window.history.back();
+}
+
+function changeName() {
+    var txt;
+    var childName = prompt("Please enter the child's name:", "Name of the child");
+    if (childName == null || childName == "") {
+        txt = "User cancelled the prompt.";
+    } else {
+        const urlParams = new URLSearchParams(window.location.search);
+        const ipParam = urlParams.get('ip');
+        window.location.href = '/main?ip=' + ipParam + '&name=' + childName;
+    }
+    document.getElementById("demo").innerHTML = txt;
 }

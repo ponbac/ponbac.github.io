@@ -9,7 +9,7 @@ body {
 
 @media (max-width: 800px) {
     body {
-      background-image: url("../images/mobile.jpg");
+      background-image: url('../images/mobile.jpg');
     }
   }
   @media (min-width: 801px) {
