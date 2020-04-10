@@ -1,4 +1,5 @@
- * {
+::-webkit-scrollbar { display: none; }
+* {
 	 box-sizing: border-box;
 }
  body {
@@ -9,7 +10,7 @@
 	 background-color: #4ec6de;
 }
  .tabbed {
-	 width: 831px;
+	 width: 850px;
 	 margin: 50px auto;
 	 position: relative;
 	 margin-top: 5%;
@@ -33,7 +34,7 @@
 	 perspective: 600px;
 }
  .tabs > div {
-	 width: 821px;
+	 width: 850px;
 	 height: 400px;
 	 position: absolute;
 	 border: 2px solid #4ec6de;
@@ -189,6 +190,9 @@ pre .val {color: #e6db74;} /* value */
 	margin: 9px;
 }
 .btn-gradient {
+	margin-top: 20px;
+}
+.btn-gradient.start {
 	margin-top: 150px;
 }
 a[class*="btn"] {text-decoration: none;}
